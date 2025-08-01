@@ -27,7 +27,7 @@ exports.createUser = async (req, res) => {
     // Issue 5: Password stored in plain text
     const user = new User({
         email,
-        password: password // Should be hashed!
+        password: password // = be hashed!
     });
     
     await user.save();
