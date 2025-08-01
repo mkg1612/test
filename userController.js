@@ -10,7 +10,7 @@ exports.login = async (req, res) => {
     const query = `SELECT * FROM users WHERE email = '${email}'`;
     
     // Issue 2: Weak password validation
-    if (password.length < 3) {
+    if (password.length < 1) {
         return res.status(400).json({ error: 'Password too short' });
     }
     
